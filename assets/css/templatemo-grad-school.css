@@ -731,8 +731,13 @@ section.why-us {
         padding: 2rem;
     }
     .main-header .logo a {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        padding-right: 0;
     }
+    div.logo{
+        padding-left: -1rem !important;
+    }
+
 }
 @media screen and (max-width: 500px) {
     .tabs-content img {
@@ -740,10 +745,10 @@ section.why-us {
     }
     
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
   
     .main-header .logo a {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 
