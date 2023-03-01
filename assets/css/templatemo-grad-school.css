@@ -743,7 +743,13 @@ section.why-us {
     .tabs-content img {
         padding: 2rem;
     }
+
+   .code button{
+        margin-top: 3rem;
+        margin-bottom: 0;
+    }
     
+   
 }
 @media screen and (max-width: 300px) {
   
