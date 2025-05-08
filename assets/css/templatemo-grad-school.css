@@ -13,8 +13,6 @@ a {
     text-decoration: none;
 }
 
-
-
 a:hover {
     color: #042326;
     text-decoration: none;
@@ -43,8 +41,6 @@ img.git {
     height: 5rem;
 }
 
-
-
 /* ================================== */
 .aboutme {
     display: flex;
@@ -59,7 +55,6 @@ img.git {
     justify-content: center;
     flex-direction: column;
     padding: 1rem;
-    
 }
 
 .email h1 {
@@ -82,7 +77,6 @@ img.git {
     justify-content: center;
     flex-direction: column;
     padding: 1rem;
-    padding: 1rem;
 }
 
 .whats h1 {
@@ -97,11 +91,10 @@ img.git {
     color: #412c06;
     font-weight: 500;
     font-size: 1.3rem;
-    
 }
 
-.now{
- color:#f5a425;
+.now {
+    color: #f5a425;
 }
 
 .code {
@@ -110,7 +103,7 @@ img.git {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .code img {
@@ -127,7 +120,7 @@ img.git {
     line-height: 28px;
 }
 
-.aboutme{
+.aboutme {
     display: flex;
     align-items: center;
     padding: 1rem;
@@ -135,7 +128,7 @@ img.git {
     margin-bottom: 2rem;
 }
 
-.cv{
+.cv {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,9 +146,7 @@ img.git {
     padding: 12px 20px;
     display: inline-block;
     outline: none;
-    
 }
-
 
 .skills li {
     font-size: 18px;
@@ -226,9 +217,7 @@ a.menu-link {
     }
 
     .code {
-        
         margin-top: 1rem;
-        
     }
 
     nav[role='navigation'] {
@@ -295,8 +284,6 @@ a.menu-link {
         padding-left: 30px !important;
     }
 
-  
-
     .main-menu {
         padding-right: 30px !important;
     }
@@ -326,12 +313,10 @@ a.menu-link {
     text-transform: uppercase;
     font-weight: 800;
     color: rgb(0, 0, 0);
-   
 }
 .main-header .logo a em {
     font-style: normal;
     color: #f5a425;
-    
 }
 
 .main-menu {
@@ -432,7 +417,6 @@ a.menu-link {
         border: 2px solid transparent;
         border-bottom: 1px solid rgba(250, 250, 250, 0.25);
     }
-  
 }
 
 /* Slider */
@@ -441,7 +425,7 @@ a.menu-link {
     /* position: relative; */
     max-height: 100%;
     overflow: hidden;
-    margin-bottom: -7px
+    margin-bottom: -7px;
 }
 
 #bg-video {
@@ -467,7 +451,6 @@ a.menu-link {
 }
 
 .main-banner .caption {
-   
     text-align: center;
     width: 100%;
     height: 100vh;
@@ -477,7 +460,6 @@ a.menu-link {
 }
 
 .main-banner .caption h6 {
-    
     margin-top: 0px;
     font-size: 18px;
     text-transform: uppercase;
@@ -500,7 +482,6 @@ a.menu-link {
     font-style: normal;
     color: #000000;
     font-weight: 500;
-    
 }
 
 @media screen and (max-width: 1180px) {
@@ -519,7 +500,6 @@ a.menu-link {
     .main-banner .caption h2 {
         font-size: 58px;
     }
-   
 }
 @media screen and (max-width: 767px) {
     .main-menu li {
@@ -622,12 +602,11 @@ section.features .col-4 {
     color: #fff;
 }
 
-
 /* Why Choosing Us */
 
 section.why-us {
     padding-top: 100px;
-    
+
     /* background-image: url(../images/choosing-bg.jpg); */
     background-color: #738485;
     /* background-repeat: no-repeat;
@@ -755,25 +734,21 @@ section.why-us {
         font-size: 1.5rem;
         padding-right: 0;
     }
-    div.logo{
+    div.logo {
         padding-left: -1rem !important;
     }
-
 }
 @media screen and (max-width: 500px) {
     .tabs-content img {
         padding: 2rem;
     }
 
-   .code button{
+    .code button {
         margin-top: 3rem;
         margin-bottom: 0;
     }
-    
-   
 }
 @media screen and (max-width: 300px) {
-  
     .main-header .logo a {
         font-size: 1rem;
     }
@@ -783,9 +758,7 @@ section.why-us {
     .tabs-content img {
         padding: 2rem;
     }
-    
 }
-
 
 section.coming-soon .continer .counter div {
     display: inline-block;
@@ -802,7 +775,6 @@ section.coming-soon .continer h4 {
 section.coming-soon .continer h4 em {
     font-style: normal;
     color: #f5a425;
-   
 }
 
 @media screen and (max-width: 767px) {
@@ -1055,7 +1027,7 @@ h1.text {
     font-weight: 600;
 }
 
-.out{
+.out {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1106,7 +1078,6 @@ section.video .left-content .main-button {
     margin: 0px auto 0;
 }
 
-
 @media screen and (max-width: 767px) {
     section.video .left-content {
         margin-bottom: 45px;
@@ -1117,16 +1088,13 @@ section.video .left-content .main-button {
         text-align: center;
     }
 
-    section.courses .item{
+    section.courses .item {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
-
-  
 }
-
 
 .video-item figure {
     position: relative;
@@ -1774,7 +1742,6 @@ footer p a:hover {
 
     .main-header em {
         padding: 10px;
-       
     }
 
     .main-menu li {
