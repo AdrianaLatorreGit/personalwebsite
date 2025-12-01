@@ -1,934 +1,1864 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Adriana Latorre | Full-Stack Developer</title>
         <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
             rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-
-        <title>Adriana Latorre</title>
-
-        <!-- Bootstrap core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-        <!-- Additional CSS Files -->
-        <link rel="stylesheet" href="assets/css/fontawesome.css" />
-        <link rel="stylesheet" href="assets/css/templatemo-grad-school.css" />
-        <link rel="stylesheet" href="assets/css/owl.css" />
-        <link rel="stylesheet" href="assets/css/lightbox.css" />
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link
+            rel="icon"
+            href="./assets/images/favicon_v1.ico"
+            type="image/x-icon"
+        />
     </head>
-
     <body>
-        <!--header-->
-        <header class="main-header clearfix" role="header">
-            <div class="logo">
-                <a href="#section1"><em>Mobile</em> Developer</a>
-            </div>
-            <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
-            <nav id="menu" class="main-nav" role="navigation">
-                <ul class="main-menu">
-                    <li><a href="#section1">Home</a></li>
-                    <li class="has-submenu">
-                        <a href="#section-kotlin">Projects</a>
-                        <ul class="sub-menu">
-                            <li><a href="#section-kotlin">Kotlin</a></li>
+        <div class="bg-animation"></div>
+        <div class="grid-overlay"></div>
+        <div id="cursor"></div>
 
-                            <li>
-                                <a href="#section-javaScript">JavaScript</a>
-                            </li>
-                            <li><a href="#section-java">Java</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#section2">About me</a></li>
-
-                    <li><a href="#section6">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- ***** Main Banner Area Start ***** -->
-
-        <section class="section main-banner" id="top" data-section="section1">
-            <div class="video-overlay header-text">
-                <div class="caption">
-                    <h6>Who am i?</h6>
-                    <h2><em>Adriana</em> Latorre</h2>
-                    <div class="main-button">
-                        <div class="scroll-to-section">
-                            <a href="#section2">About me</a>
-                        </div>
-                    </div>
+        <header id="header">
+            <div class="container">
+                <div class="header-content">
+                    <a class="logo" onclick="showPage('home')"
+                        >adrianaLatorre.dev</a
+                    >
+                    <nav>
+                        <a
+                            onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                            >Projetos</a
+                        >
+                        <a
+                            onclick="showPage('home'); setTimeout(() => document.getElementById('contact').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                            >Contato</a
+                        >
+                    </nav>
                 </div>
             </div>
-        </section>
-        <!-- ***** Main Banner Area End ***** -->
+        </header>
 
-        <section class="features">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-12">
-                        <div class="features-post">
-                            <div class="features-content">
-                                <div class="content-show">
-                                    <h4>
-                                        <i class="fa fa-pencil"></i>Projects
-                                    </h4>
+        <div id="home" class="page active">
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="avatar-wrapper">
+                            <img
+                                src="assets/images/fotolinkedin.png"
+                                alt="Adriana Latorre"
+                            />
+                        </div>
+
+                        <div class="code-display">
+                            <pre
+                                class="code-text"
+                            ><span class="comment">// Inicializando desenvolvedor...</span>
+<span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="string">nome</span>: <span class="string">'Adriana Latorre'</span>,
+  <span class="string">role</span>: <span class="string">'Full-Stack Developer'</span>,
+  <span class="string">skills</span>: [<span class="string">'React'</span>, <span class="string">'Node.js'</span>, <span class="string">'JavaScript'</span>],
+  <span class="function">transformarIdeias</span>: () => <span class="string">'código limpo'</span>
+};
+
+developer.<span class="function">iniciar</span>();
+<span class="comment">// > Sistema pronto. Aguardando próximo projeto...</span></pre>
+                        </div>
+
+                        <p class="hero-subtitle">
+                            <span class="comment"
+                                >// Transformando ideias em realidade
+                                digital.</span
+                            >
+                        </p>
+
+                        <button
+                            class="cta-button"
+                            onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})"
+                        >
+                            Ver Meu Trabalho
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio" class="section">
+                <div class="container">
+                    <h2 class="section-title fade-in">Projetos em Destaque</h2>
+
+                    <div class="portfolio-grid">
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('tupi-recarga')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="assets/images/tupi_app.jpeg"
+                                    alt="Screenshot do App Tupi Mobility"
+                                />
+
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag"
+                                            >React Native</span
+                                        >
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">TypeScript</span>
+                                        <span class="tech-tag">GCP</span>
+                                        <span class="tech-tag">Firebase</span>
+                                        <span class="tech-tag">BigQuery</span>
+                                        <span class="tech-tag">REST APIs</span>
+                                    </div>
                                 </div>
-                                <div class="content-hide">
-                                    <p>
-                                        I specialize in React Native development
-                                        with additional expertise in Java and a
-                                        growing focus on Kotlin. Beyond coding,
-                                        I thoroughly analyze project
-                                        architecture and nuances to ensure
-                                        comprehensive understanding of every
-                                        aspect. This holistic approach enables
-                                        me to make meaningful contributions to
-                                        mobile applications, combining technical
-                                        proficiency with strategic development
-                                        insights.
-                                    </p>
+                            </div>
 
-                                    <div class="scroll-to-section">
-                                        <a href="#section-kotlin"
-                                            >Take a look</a
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    App de Mobilidade Elétrica — Tupi (React
+                                    Native)
+                                </h3>
+                                <p class="project-description">
+                                    Aplicativo mobile de grande escala, com mais
+                                    de
+                                    <strong>200.000 usuários ativos</strong> e
+                                    integração com
+                                    <strong>1.422 estações de recarga</strong>.
+                                    Desenvolvimento e manutenção usando React
+                                    Native, APIs REST, GCP, Firebase, BigQuery,
+                                    notificações push e arquitetura escalável
+                                    para suportar mais de
+                                    <strong
+                                        >1 milhão de recargas realizadas</strong
+                                    >.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('whitelabel-mobility-apps')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="assets/images/whitelabel.jpeg"
+                                    alt="Apps Whitelabel de Mobilidade Elétrica"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag"
+                                            >React Native</span
+                                        >
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">TypeScript</span>
+                                        <span class="tech-tag">REST APIs</span>
+                                        <span class="tech-tag">Firebase</span>
+                                        <span class="tech-tag">GCP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    Apps White-Label de Mobilidade Elétrica
+                                </h3>
+                                <p class="project-description">
+                                    Desenvolvimento e manutenção de múltiplos
+                                    aplicativos white-label (Mobilize, Andrade &
+                                    Sales, BYD Recharge, Volt, ION, PlugBRA,
+                                    Link+ Energy, ViaVolt, BR Super Carga e Tupi
+                                    Recarga) — todos construídos sobre a mesma
+                                    base tecnológica em React Native, com
+                                    integrações em larga escala para veículos
+                                    elétricos.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('nlw-esports-ignite')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="assets/images/igNigth.png"
+                                    alt="Screenshot NLW Esports Ignite"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">TypeScript</span>
+                                        <span class="tech-tag"
+                                            >TailwindCSS</span
+                                        >
+                                        <span class="tech-tag">Expo</span>
+                                        <span class="tech-tag">Prisma</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    NLW Esports Ignite
+                                </h3>
+                                <p class="project-description">
+                                    Projeto full-stack desenvolvido durante o
+                                    <strong>NLW Ignite Bootcamp</strong>.
+                                    Aplicação de eSports que permite criação de
+                                    anúncios de jogos, gerenciamento de partidas
+                                    e interação entre jogadores, integrando web
+                                    (React/TypeScript/TailwindCSS), mobile
+                                    (React Native/Expo) e back-end
+                                    (Node.js/Prisma).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('saas-platform')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="assets/images/print-paint.png"
+                                    alt="print-paint app image"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Kotlin</span>
+                                        <span class="tech-tag"
+                                            >Android Studio (IDE)</span
+                                        >
+                                        <span class="tech-tag">Gradle</span>
+                                        <span class="tech-tag"
+                                            >Android SDK / Android API</span
+                                        >
+                                        <span class="tech-tag">XML</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    PaintApp (Aplicativo de Pintura Android)
+                                </h3>
+                                <p class="project-description">
+                                    Desenvolvimento de um aplicativo nativo para
+                                    Android, construído em Kotlin, que simula as
+                                    funcionalidades básicas de um programa de
+                                    pintura (tipo Paintbrush).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('alarme-beber-agua')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="assets/images/drinkWater.png"
+                                    alt="print of the project"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Kotlin</span>
+                                        <span class="tech-tag"
+                                            >Android Studio (IDE)</span
+                                        >
+                                        <span class="tech-tag"
+                                            >Android SDK</span
+                                        >
+                                        <span class="tech-tag"
+                                            >AlarmManager</span
                                         >
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-12">
-                        <div class="features-post second-features">
-                            <div class="features-content">
-                                <div class="content-show">
-                                    <h4>
-                                        <i class="fa fa-graduation-cap"></i
-                                        >education
-                                    </h4>
-                                </div>
-                                <div class="content-hide">
-                                    <p>
-                                        I remain committed to continuous
-                                        professional development, actively
-                                        seeking opportunities to stay at the
-                                        forefront of industry advancements.
-                                        Through recent courses, workshops, and
-                                        mentorships, I consistently update my
-                                        technical toolkit to embrace emerging
-                                        technologies. This dedication to
-                                        lifelong learning ensures I deliver
-                                        cutting-edge solutions in every project
-                                        I undertake.
-                                    </p>
-                                </div>
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    DrinkWater (App Android Nativo)
+                                </h3>
+                                <p class="project-description">
+                                    Aplicativo nativo Android em Kotlin que
+                                    calcula a meta diária de água conforme o
+                                    peso do usuário e agenda lembretes usando a
+                                    API nativa de alarme
+                                    (AlarmClock.ACTION_SET_ALARM).
+                                </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-12">
-                        <div class="features-post third-features">
-                            <div class="features-content">
-                                <div class="content-show">
-                                    <h4>
-                                        <i class="fa fa-book"></i>Experience
-                                    </h4>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('chat-application')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="assets/images/chatApp-screen.png"
+                                    alt="Screenshot ChatApp"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Java</span>
+                                        <span class="tech-tag">TCP/IP</span>
+                                        <span class="tech-tag"
+                                            >Socket Programming</span
+                                        >
+                                    </div>
                                 </div>
-                                <div class="content-hide">
-                                    <p>
-                                        TUPI - Electric Mobility As a Full Stack
-                                        Developer, I contribute to Brazil's
-                                        largest electric vehicle charging
-                                        network. Our team manages the complete
-                                        ecosystem from station mapping to
-                                        charger installation, recently
-                                        partnering with Raízen Power to advance
-                                        our technological capabilities and
-                                        service offerings.
-                                        <br />
-                                        <br />
-                                        GIVISIEZ - Digital Transformation I
-                                        worked as a Mobile Developer using React
-                                        Native with TypeScript on a remote
-                                        Brazilian team. We developed an
-                                        application for allergy patient
-                                        registration and treatment tracking,
-                                        providing doctors with comprehensive
-                                        vaccine schedule information. Our team
-                                        followed Scrum methodologies with
-                                        specialists across front-end, back-end,
-                                        QA, data engineering, and cybersecurity.
-                                    </p>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">ChatApplication</h3>
+                                <p class="project-description">
+                                    Aplicativo de chat em Java, com arquitetura
+                                    cliente-servidor baseada em sockets TCP/IP.
+                                    Permite múltiplos usuários trocarem
+                                    mensagens em tempo real, utilizando I/O
+                                    Streams para comunicação eficiente e
+                                    confiável.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('react-native-flashlight')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="assets/images/dio1.png"
+                                    alt="Screenshot do React Native Flashlight"
+                                />
+                                <img
+                                    src="assets/images/dio2.png"
+                                    alt="Screenshot do React Native Flashlight"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag"
+                                            >React Native</span
+                                        >
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag"
+                                            >react-native-shake</span
+                                        >
+                                        <span class="tech-tag"
+                                            >react-native-torch</span
+                                        >
+                                        <span class="tech-tag">Hooks</span>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    React Native Flashlight (App Mobile)
+                                </h3>
+                                <p class="project-description">
+                                    Aplicativo mobile em React Native que aciona
+                                    a lanterna do dispositivo usando movimentos
+                                    (react-native-shake) e controle direto da
+                                    lanterna (react-native-torch), desenvolvido
+                                    de forma leve e responsiva com Hooks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('java-firebase')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="./assets//images/firebase.png"
+                                    alt="Java Firebase app image"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Java</span>
+                                        <span class="tech-tag">Firebase</span>
+                                        <span class="tech-tag"
+                                            >Realtime Database</span
+                                        >
+                                        <span class="tech-tag"
+                                            >Android Studio (IDE)</span
+                                        >
+                                        <span class="tech-tag">API REST</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    Java Firebase (Integração Backend / Mobile)
+                                </h3>
+                                <p class="project-description">
+                                    Desenvolvimento de um aplicativo Android em
+                                    Java com integração ao Firebase, permitindo
+                                    armazenamento e sincronização de dados em
+                                    tempo real, ideal para estudos de backend e
+                                    prototipagem.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('capture-camera')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="./assets//images/captureCamera.png"
+                                    alt="Screenshot do Capture Camera"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Java</span>
+                                        <span class="tech-tag">Android</span>
+                                        <span class="tech-tag"
+                                            >Camera Intent</span
+                                        >
+                                        <span class="tech-tag"
+                                            >Gallery Intent</span
+                                        >
+                                        <span class="tech-tag"
+                                            >Permissions API</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    Capture Camera (Android Nativo)
+                                </h3>
+                                <p class="project-description">
+                                    Aplicativo Android em Java que permite
+                                    capturar fotos pela câmera do dispositivo ou
+                                    selecionar imagens da galeria, utilizando
+                                    Intents nativas e controle de permissões em
+                                    tempo de execução.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('site-grasielaMuller')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="./assets/images/grasi-site.png"
+                                    alt="Site Grasiela Muller image"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag"
+                                            >CSS3 / SCSS</span
+                                        >
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag"
+                                            >Responsive Design</span
+                                        >
+                                        <span class="tech-tag">Parcel</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    Site Grasiela Muller (Portfólio e
+                                    Apresentação)
+                                </h3>
+                                <p class="project-description">
+                                    Criação de um site responsivo utilizando
+                                    HTML, SCSS e JavaScript, seguindo mockups e
+                                    boas práticas de design. Inclui efeitos de
+                                    hover suaves, layout em grid e estrutura
+                                    semântica HTML5.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('agente-passagens')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="./assets/images/agente_passagens.png"
+                                    alt="Agente Passagens bot image"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag"
+                                            >Web Scraping / APIs</span
+                                        >
+                                        <span class="tech-tag"
+                                            >Automação / Scheduler</span
+                                        >
+                                        <span class="tech-tag"
+                                            >Email Notification</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    Agente Passagens (Busca automática de
+                                    passagens aéreas)
+                                </h3>
+                                <p class="project-description">
+                                    Bot inteligente que monitora preços de
+                                    passagens aéreas e envia notificações por
+                                    e-mail quando o valor atinge um limite
+                                    definido — ideal para encontrar ofertas sem
+                                    precisar verificar manualmente.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card fade-in"
+                            onclick="showProject('doctorcare')"
+                        >
+                            <div class="project-image">
+                                <img
+                                    src="./assets/images/doctorCare.png"
+                                    alt="DoctorCare landing page image"
+                                />
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag"
+                                            >CSS3 / SCSS</span
+                                        >
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag"
+                                            >Responsive Design</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    DoctorCare (Landing Page / Interface Web)
+                                </h3>
+                                <p class="project-description">
+                                    Landing page responsiva desenvolvida para
+                                    agendamento de consultas médicas — layout
+                                    moderno, navegação fluida e design adaptado
+                                    a diferentes dispositivos.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <section class="section why-us" data-section="section2">
+        <section id="contact" class="contact-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="tabs">
-                            <ul>
-                                <li><a href="#tabs-1">About me</a></li>
-                                <li><a href="#tabs-2">Skills</a></li>
-                                <li><a href="#tabs-3">Education</a></li>
-                            </ul>
-                            <section class="tabs-content">
-                                <article id="tabs-1">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <img
-                                                src="assets/images/fotolinkedin.png"
-                                                alt="profile picture"
-                                            />
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h4>who am I?</h4>
-                                            <p>
-                                                Drawing from 15 years in
-                                                photography, I've cultivated a
-                                                keen eye for detail and a
-                                                creative approach to
-                                                problem-solving. The pandemic
-                                                prompted me to thoughtfully
-                                                reconsider my career path,
-                                                inspiring a transition into
-                                                technology development where I
-                                                can apply my skills in a new,
-                                                dynamic field. My background has
-                                                taught me to observe carefully
-                                                and think creatively when
-                                                approaching challenges. I enjoy
-                                                staying current with
-                                                technological developments and
-                                                finding practical applications
-                                                for new tools and methods. I
-                                                believe that curiosity paired
-                                                with determination helps us grow
-                                                both personally and
-                                                professionally. The adaptability
-                                                I developed as a photographer
-                                                has prepared me well for the
-                                                ever-changing landscape of
-                                                technology. I'm eager to
-                                                contribute my unique perspective
-                                                that bridges visual creativity
-                                                and technical precision to
-                                                development teams. I approach
-                                                this career transition with
-                                                humility, enthusiasm for
-                                                learning, and a commitment to
-                                                making meaningful contributions
-                                                to innovative projects.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article id="tabs-2">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="col-md-6 skills">
-                                                <h4>hard Skills</h4>
-                                                <p class="skills">
-                                                    <li>Kotlin</li>
-                                                    <li>Java</li>
-                                                    <li>JavaScript</li>
-                                                    <li>Node.js</li>
-                                                    <li>React</li>
-                                                    <li>React-Native</li>
-                                                    <li>Mongodb</li>
-                                                    <li>Express</li>
-                                                    <li>MySql</li>
-                                                    <li>MongoDb</li>
-                                                    <li>Express</li>
-                                                </p>
-                                            </div>
-                                        </div>
+                <div class="contact-wrapper">
+                    <h2 class="section-title fade-in">
+                        Vamos Trabalhar Juntos?
+                    </h2>
 
-                                        <div class="col-md-6">
-                                            <h4>soft Skills</h4>
-
-                                            <p>
-                                                <li>Technology Development</li>
-                                                <li>Team work</li>
-                                                <li>Communication/oratory</li>
-                                                <li>Love Challenges</li>
-                                                <li>
-                                                    Patience and Perseverance
-                                                </li>
-                                                <li>Empathy</li>
-                                                <li>Open mind</li>
-                                                <li>Continuous Learning</li>
-                                                <li>Focused</li>
-                                                <li>Problem Solving</li>
-                                                <li>Attention to Detail</li>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article id="tabs-3">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h4>Education</h4>
-
-                                            <p>
-                                                <li>
-                                                    System Analysis and
-                                                    Development, Information
-                                                    Technology -
-                                                    <strong>Estácio</strong>
-                                                    -
-                                                    <strong class="now"
-                                                        >Now</strong
-                                                    >
-                                                </li>
-
-                                                <li>
-                                                    Java/Kotlin -
-                                                    <strong
-                                                        >Codans School</strong
-                                                    >
-                                                    -
-                                                    <strong class="now"
-                                                        >Now</strong
-                                                    >
-                                                </li>
-                                                <li>
-                                                    Web Full Stack
-                                                    Javascript-Node.js -
-                                                    <strong
-                                                        >Digital House
-                                                        Brasil</strong
-                                                    >
-                                                </li>
-                                                <li>
-                                                    CC50´s Introduction to
-                                                    Computer Science -
-                                                    <strong>Harvard</strong>
-                                                </li>
-                                                <li>
-                                                    Full kotlin course for
-                                                    android -
-                                                    <strong>Udemy</strong>
-                                                </li>
-                                                <li>
-                                                    Android lab 2/2 -
-                                                    <strong
-                                                        >Samsung Ocean</strong
-                                                    >
-                                                </li>
-                                                <li>
-                                                    Backend with node and
-                                                    express 2/2 -
-                                                    <strong
-                                                        >Samsung Ocean</strong
-                                                    >
-                                                </li>
-                                                <li>
-                                                    Fullstack development and
-                                                    software architecture,
-                                                    front-end and mobile
-                                                    development, TI management,
-                                                    innovation and digital
-                                                    transformation -
-                                                    <strong>Dev Sum Mit</strong>
-                                                </li>
-                                                <li>
-                                                    Bachelor in Photography -
-                                                    <strong
-                                                        >Senac São Paulo</strong
-                                                    >
-                                                </li>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </section>
+                    <form id="contactform">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                name="name"
+                                placeholder="Seu Nome"
+                                required
+                            />
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                placeholder="seu@email.com"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="subject"
+                                name="subject"
+                                placeholder="Assunto"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <textarea
+                                class="form-control"
+                                id="message"
+                                name="message"
+                                placeholder="Conte-me sobre seu projeto..."
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+
+                    <p
+                        id="form-message"
+                        style="
+                            margin-top: 20px;
+                            display: none; /* Inicialmente oculto */
+                            text-align: center;
+                            font-weight: 600;
+                        "
+                    ></p>
                 </div>
             </div>
         </section>
 
-        <section
-            class="section courses"
-            class="kotlin"
-            data-section="section-kotlin"
-        >
-            <h1 class="text">Kotlin</h1>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+        ></script>
 
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12"></div>
+        <script src="path/to/your/script.js"></script>
 
-                    <div class="owl-carousel owl-theme">
-                        <div class="item">
-                            <img
-                                src="assets/images/chatapp.png"
-                                alt="Course #1"
-                            />
-                            <div class="down-content">
-                                <h4>ChatApp</h4>
-                                <p>
-                                    Complete app with Firebase authentications.
-                                    All message rooms recording information sent
-                                    and received.
-                                </p>
+        <div id="alarme-beber-agua" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
 
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/ChatApplication"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://www.youtube.com/watch?v=bRzb12OUnp0&ab_channel=AdrianaLatorre"
-                                            target="_blank"
-                                            >Play
-                                            <i
-                                                class="fa fa-angle-double-right"
-                                            ></i
-                                        ></a>
-                                    </div>
-                                </div>
+                    <div class="project-header">
+                        <h1>Alarme Beber Água (Aplicativo Android)</h1>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Mobile</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Projeto Pessoal e Funcional</span>
                             </div>
                         </div>
+                        <div class="project-tech"></div>
 
-                        <div class="item">
-                            <img
-                                src="assets/images/paint.png"
-                                alt="Course #1"
-                            />
-                            <div class="down-content">
-                                <h4>PaintApp</h4>
-                                <p>
-                                    Paintbrush that draws in 3 different colors,
-                                    according to the one that was clicked and
-                                    clear in the white color what was done.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/PaintApp"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://www.youtube.com/watch?v=d3KlhcN2Z4o&ab_channel=AdrianaLatorre"
-                                            target="_blank"
-                                            >Play
-                                            <i
-                                                class="fa fa-angle-double-right"
-                                            ></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <img
-                                src="assets/images/neetapi.png"
-                                alt="Course #1"
-                            />
-                            <div class="down-content">
-                                <h4>NetAPI</h4>
-                                <p>
-                                    Developed in Retrofit - Jetpack Compose.
-                                    Firebase authentication Picasso, View
-                                    Binding and Recicle View.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/youtubeAPI-kotlin"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://www.youtube.com/watch?v=0ps-ROICS8Y&ab_channel=AdrianaLatorre"
-                                            target="_blank"
-                                            >Play
-                                            <i
-                                                class="fa fa-angle-double-right"
-                                            ></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <img
-                                src="assets/images/drinkwater.png"
-                                alt="Course #1"
-                            />
-                            <div class="down-content">
-                                <h4>Alarm</h4>
-                                <p>
-                                    Calculates how much water you should drink
-                                    according to your weight and accesses your
-                                    alarm to create a reminder.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/alarme-beberAgua"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://www.youtube.com/watch?v=aaVM3zJFzIw&ab_channel=AdrianaLatorre"
-                                            target="_blank"
-                                            >Play
-                                            <i
-                                                class="fa fa-angle-double-right"
-                                            ></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <img
-                                src="assets/images/receitasVo.png"
-                                alt="receitasVo image"
-                            />
-                            <div class="down-content">
-                                <h4>Nonna's recipe</h4>
-                                <p>
-                                    Creating a solid base for recyclerView
-                                    adapter to use in other environments.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/ReceitasDaVo"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://www.youtube.com/watch?v=geo5IX_HlSA&ab_channel=AdrianaLatorre"
-                                            target="_blank"
-                                            >Play
-                                            <i
-                                                class="fa fa-angle-double-right"
-                                            ></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section courses" data-section="section-javaScript">
-            <div class="container-fluid">
-                <h1 class="text">React Native</h1>
-                <div class="row">
-                    <div class="owl-carousel owl-theme">
-                        <div class="item">
-                            <img
-                                src="assets/images/githubProfile.png"
-                                alt="Course #1"
-                            />
-                            <div class="down-content">
-                                <h4>Github Profile</h4>
-                                <p>
-                                    React-native project that use Github API to
-                                    recreate a profile page. Using React Native
-                                    CLI.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/react-native-projects/tree/main/react-native-githubProfile"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <img
-                                src="assets/images/flashlight.png"
-                                alt="Course #1"
-                            />
-                            <div class="down-content">
-                                <h4>Flashlight</h4>
-                                <p>
-                                    React-Native app, using react-native-shake e
-                                    react-native-torch to access mobile
-                                    flashlight. Published first project release.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/react-native-flashlight"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <img src="assets/images/pi.png" alt="Course #1" />
-                            <div class="down-content">
-                                <h4>Integrative Proj</h4>
-                                <p>
-                                    JavaScript complete e-commerce with
-                                    registration in MySql. Using Token
-                                    authentication.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/projeto-integrador-dh"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://www.youtube.com/watch?v=1se-X2HQtJc&ab_channel=AdrianaLatorre"
-                                            target="_blank"
-                                            >Play
-                                            <i
-                                                class="fa fa-angle-double-right"
-                                            ></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <img
-                                src="assets/images/portf.png"
-                                alt="Course #1"
-                            />
-                            <div class="down-content">
-                                <h4>Curriculum</h4>
-                                <p>
-                                    React-native project that creates a resume
-                                    with your profile information. Responsive on
-                                    multiple platforms.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/react-native-projects/tree/main/react-native-githubProfile"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <img src="assets/images/nlw.png" alt="Course #1" />
-                            <div class="down-content">
-                                <h4>NLW - Esports</h4>
-                                <p>
-                                    React-Native project - web and mobile, with
-                                    Expo Lib that register user on game platform
-                                    saving and changing data.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/nlw-Esports-ignite"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://www.youtube.com/watch?v=LWsyGEgw4Lw&ab_channel=AdrianaLatorre"
-                                            target="_blank"
-                                            >Play
-                                            <i
-                                                class="fa fa-angle-double-right"
-                                            ></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section courses" data-section="section-java">
-            <h1 class="text">Java</h1>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12"></div>
-
-                    <div class="owl-carousel owl-theme">
-                        <div class="item">
-                            <img
-                                src="assets/images/firebase.png"
-                                alt="Course #1"
-                            />
-                            <div class="down-content">
-                                <h4>Fire base register</h4>
-                                <p>
-                                    User registration in firebase. Authn and
-                                    database data control, finishing activity in
-                                    logout button.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/java-firebase"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://www.youtube.com/watch?v=HP8onihCVZU&ab_channel=AdrianaLatorre"
-                                            target="_blank"
-                                            >Play
-                                            <i
-                                                class="fa fa-angle-double-right"
-                                            ></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <img
-                                src="assets/images/cameracapture.png"
-                                alt="Course #1"
-                            />
-                            <div class="down-content">
-                                <h4>Camera Capture</h4>
-                                <p>
-                                    Accessing camera authorization to capture a
-                                    photo by camera and save it to your phone´s
-                                    storage.
-                                </p>
-
-                                <div class="out">
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://github.com/AdrianaLatorreGit/capture-camera"
-                                            target="_blank"
-                                            >Code <i class="fa-thumbs-o-up"></i
-                                        ></a>
-                                    </div>
-
-                                    <div class="text-button-pay">
-                                        <a
-                                            href="https://www.youtube.com/watch?v=wc-jJgafToQ&ab_channel=AdrianaLatorre"
-                                            target="_blank"
-                                            >Play
-                                            <i
-                                                class="fa fa-angle-double-right"
-                                            ></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section contact" data-section="section6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-heading">
-                            <h2>Let’s Chat!</h2>
-                        </div>
-
-                        <div class="aboutme">
-                            <div class="email">
-                                <a
-                                    href="mailto:dri.latorre@gmail.com"
-                                    target="_blank"
-                                >
-                                    <h1>Send an email</h1>
-                                    dri.latorre@gmail.com
-                                </a>
-                            </div>
-
-                            <div class="whats">
-                                <h1>Send a WhatsApp message</h1>
-                                <a
-                                    href="https://wa.me/5511971847604"
-                                    target="_blank"
-                                >
-                                    +551197184-7604
-                                </a>
-                            </div>
-
-                            <a
-                                href="https://github.com/AdrianaLatorreGit"
-                                target="_blank"
+                        <div class="tech-stack">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">XML</span>
+                            <span class="tech-tag">Android Studio (IDE)</span>
+                            <span class="tech-tag">Gradle</span>
+                            <span class="tech-tag"
+                                >Android SDK / Android API</span
                             >
-                                <div class="code">
-                                    <h1>See my codes</h1>
-
-                                    <img
-                                        src="assets/images/github.png"
-                                        alt=""
-                                    />
-                                </div>
-                            </a>
+                            <span class="tech-tag">AlarmManager</span>
+                            <span class="tech-tag">Notifications API</span>
                         </div>
+                    </div>
 
-                        <div class="cv">
-                            <a
-                                href="assets/images/Adriana_Latorre-Developer.pdf"
-                                target="_blank"
-                            >
-                                <button type="button">Download my CV</button>
-                            </a>
+                    <div class="container_img-project">
+                        <img
+                            src="assets/images/drinkWater.png"
+                            alt="Screenshot da tela principal do aplicativo de alarme de água"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Funcionalidades Principais</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>💧 Cálculo de Ingestão</h3>
+                                <p>
+                                    Calcula a meta diária de ingestão de água
+                                    com base no peso informado pelo usuário.
+                                </p>
+                            </div>
+                            <div class="feature-card">
+                                <h3>⏰ Integração com Alarme Nativo</h3>
+                                <p>
+                                    Utiliza a API nativa do Android
+                                    (`AlarmClock.ACTION_SET_ALARM`) para abrir o
+                                    aplicativo de Alarme do sistema,
+                                    pré-preenchendo a hora e a mensagem.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>📝 Redefinição de Dados</h3>
+                                <p>
+                                    Recurso interativo para limpar o peso, idade
+                                    e resultado do cálculo, utilizando um
+                                    `AlertDialog` para confirmação do usuário.
+                                </p>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="assets/apk/drinkWater.apk"
+                            class="project-link primary-button"
+                            download
+                        >
+                            <i class="fas fa-download"></i> Baixar APK (Android)
+                        </a>
+                        <a
+                            href="https://www.youtube.com/watch?v=aaVM3zJFzIw&ab_channel=AdrianaLatorre"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fas fa-external-link-alt"></i> Ver
+                            Demonstração
+                        </a>
+
+                        <a
+                            href="https://github.com/AdrianaLatorreGit/alarme-beberAgua"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div id="chat-application" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
+
+                    <div class="project-header">
+                        <h1>Chat Application (Java + Sockets)</h1>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Backend/Mobile</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Estudo e Protótipo</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Socket Programming</span>
+                            <span class="tech-tag">TCP/IP</span>
+                            <span class="tech-tag">I/O Streams</span>
+                        </div>
+                    </div>
+
+                    <div class="container_img-project">
+                        <img
+                            src="assets/images/chatApp-screen.png"
+                            alt="Screenshot do Chat Application"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Funcionalidades Principais</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>💬 Comunicação em Tempo Real</h3>
+                                <p>
+                                    Aplicação cliente-servidor construída em
+                                    Java, utilizando sockets TCP para troca de
+                                    mensagens instantâneas entre vários usuários
+                                    conectados.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>👥 Múltiplos Usuários</h3>
+                                <p>
+                                    O servidor gerencia diversas conexões
+                                    simultâneas, criando uma thread individual
+                                    para cada cliente. Isso permite que várias
+                                    pessoas conversem ao mesmo tempo.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>📡 Arquitetura Simples e Eficiente</h3>
+                                <p>
+                                    O projeto utiliza I/O Streams do Java
+                                    (InputStream, InputStreamReader,
+                                    BufferedReader, PrintWriter) para realizar a
+                                    comunicação entre cliente e servidor via
+                                    sockets, garantindo leitura e envio
+                                    eficiente de mensagens em tempo real.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="assets/apk/chatApp.apk"
+                            class="project-link primary-button"
+                            download
+                        >
+                            <i class="fas fa-download"></i> Baixar APK (Android)
+                        </a>
+                        <a
+                            href="https://www.youtube.com/watch?v=bRzb12OUnp0"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fas fa-external-link-alt"></i> Ver
+                            Demonstração
+                        </a>
+
+                        <a
+                            href="https://github.com/AdrianaLatorreGit/ChatApplication"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="nlw-esports-ignite" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
+
+                    <div class="project-header">
+                        <h1>NLW Esports Ignite (Bootcamp Rocketseat)</h1>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Full-Stack</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Projeto de Bootcamp</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">TailwindCSS</span>
+                            <span class="tech-tag">Expo</span>
+                            <span class="tech-tag">Prisma</span>
+                        </div>
+                    </div>
+
+                    <div class="container_img-project desktop-image">
+                        <img
+                            src="assets/images/igNigth.png"
+                            alt="Screenshot da tela principal do aplicativo de jogos"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Funcionalidades Principais</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>🎮 Cadastro de Anúncios</h3>
+                                <p>
+                                    Permite que jogadores criem anúncios para
+                                    times ou partidas, incluindo informações
+                                    sobre o jogo, disponibilidade e comunicação.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>📱 Web e Mobile Integrados</h3>
+                                <p>
+                                    Aplicação web em
+                                    React/TypeScript/TailwindCSS e mobile em
+                                    React Native com Expo, garantindo
+                                    experiência consistente em diferentes
+                                    dispositivos.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🗄️ Back-end e Banco de Dados</h3>
+                                <p>
+                                    Servidor Node.js com Prisma e banco de
+                                    dados, permitindo gerenciamento eficiente de
+                                    anúncios, usuários e partidas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/AdrianaLatorreGit/nlw-Esports-ignite"
+                            class="project-link primary-button"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                        <a
+                            href="https://www.youtube.com/watch?v=LWsyGEgw4Lw"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fas fa-external-link-alt"></i> Ver
+                            Demonstração
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="react-native-flashlight" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
+
+                    <div class="project-header">
+                        <h1>React Native Flashlight(Bootcamp DIO)</h1>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Mobile</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Estudo e Protótipo</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">react-native-shake</span>
+                            <span class="tech-tag">react-native-torch</span>
+                            <span class="tech-tag"
+                                >Hooks (useState / useEffect)</span
+                            >
+                        </div>
+                    </div>
+
+                    <div class="container_img-project">
+                        <img
+                            src="assets/images/dio1.png"
+                            alt="Screenshot do React Native Flashlight"
+                            class="project-hero-image"
+                        />
+                        <img
+                            src="assets/images/dio2.png"
+                            alt="Screenshot do React Native Flashlight"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Funcionalidades Principais</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>📱 Acender a Lanterna com Movimento</h3>
+                                <p>
+                                    Utiliza a biblioteca
+                                    <strong>react-native-shake</strong>
+                                    para detectar movimentos do celular e
+                                    acionar a lanterna.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🔦 Controle da Lanterna</h3>
+                                <p>
+                                    Integração com
+                                    <strong>react-native-torch</strong> para
+                                    ligar e desligar a lanterna do dispositivo
+                                    de forma rápida e responsiva.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>⚡ Performance Leve</h3>
+                                <p>
+                                    Desenvolvido com React Native utilizando
+                                    <strong>Hooks</strong>
+                                    para gerenciar estado e ciclo de vida da
+                                    aplicação de forma eficiente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/AdrianaLatorreGit/react-native-flashlight"
+                            class="project-link primary-button"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tupi-recarga" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
+
+                    <div class="project-header">
+                        <h1>Tupi Recarga – App de Mobilidade Elétrica</h1>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Mobile</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Ambiente Real de Produção</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Mapas e Geolocalização</span>
+                            <span class="tech-tag"
+                                >Pagamento e Sessões de Recarga</span
+                            >
+                        </div>
+                    </div>
+
+                    <div class="container_img-project large-project-image">
+                        <img
+                            src="assets/images/tupi_app.jpeg"
+                            alt="Screenshot do app Tupi Recarga"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Sobre o Projeto</h2>
+                        <p>
+                            Trabalhei no aplicativo
+                            <strong>Tupi Recarga</strong>, uma das maiores
+                            plataformas de recarga para veículos elétricos do
+                            Brasil. O app conecta motoristas a uma rede nacional
+                            de estações de recarga, oferecendo funcionalidades
+                            como localização de eletropontos, início e
+                            monitoramento de sessões, pagamentos e gestão de
+                            veículos.
+                        </p>
+
+                        <p>
+                            O projeto opera em grande escala e exige alta
+                            confiabilidade, atuando diariamente para milhares de
+                            usuários em um ambiente dinâmico e crítico. Durante
+                            minha atuação, trabalhei em melhorias, correções,
+                            interface e comportamento funcional do app.
+                        </p>
+
+                        <h2>Escala da Plataforma</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>⚡ 22,7 GWh consumidos</h3>
+                                <p>
+                                    Uma operação robusta e ativa, com grande
+                                    volume de energia movimentado na rede Tupi —
+                                    reforçando o impacto real do aplicativo.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🔌 1.422 estações conectadas</h3>
+                                <p>
+                                    A cobertura nacional cresce diariamente,
+                                    exigindo que o app seja performático,
+                                    escalável e confiável.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🔁 1.091.697 recargas realizadas</h3>
+                                <p>
+                                    Volume alto de sessões reais, demonstrando
+                                    que o app é usado intensivamente pelos
+                                    motoristas.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>👥 Mais de 111 mil usuários ativos</h3>
+                                <p>
+                                    Aplicativo grande, com tráfego real e
+                                    necessidades de estabilidade e ótima
+                                    experiência de uso.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Atuação no App</h2>
+                        <ul class="project-list">
+                            <li>
+                                Correções e otimizações de telas e navegação
+                            </li>
+                            <li>
+                                Ajustes no fluxo de início e término de recarga
+                            </li>
+                            <li>Melhorias visuais e de componentes UI</li>
+                            <li>
+                                Ajustes de comportamento em telas de login, mapa
+                                e perfil
+                            </li>
+                            <li>
+                                Testes e validação em ambiente real com usuários
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.tupinamba"
+                            class="project-link primary-button"
+                            target="_blank"
+                        >
+                            <i class="fas fa-external-link-alt"></i> Ver no
+                            Google Play
+                        </a>
+
+                        <a
+                            href="https://tupimob.com/"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fas fa-link"></i> Site Oficial
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="whitelabel-mobility-apps" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
+
+                    <div class="project-header">
+                        <h1>Aplicativos White-Label de Mobilidade Elétrica</h1>
+
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Mobile</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-industry"></i>
+                                <span>Projetos Reais em Produção</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">GCP</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">BigQuery</span>
+                        </div>
+                    </div>
+
+                    <div class="container_img-project">
+                        <img
+                            src="assets/images/whitelabel.jpeg"
+                            alt="Apps white-label desenvolvidos"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Resumo do Projeto</h2>
+                        <p>
+                            Participei do desenvolvimento, manutenção e evolução
+                            de um
+                            <strong
+                                >ecossistema de aplicativos white-label</strong
+                            >
+                            usados em todo o Brasil por motoristas de veículos
+                            elétricos, todos baseados na mesma base tecnológica
+                            em React Native.
+                        </p>
+
+                        <p>
+                            Esses aplicativos compartilham a mesma estrutura
+                            técnica, sendo customizados para diferentes marcas e
+                            redes de recarga:
+                        </p>
+
+                        <ul>
+                            <li>Mobilize Charge Pass</li>
+                            <li>Andrade & Sales</li>
+                            <li>BYD Recharge</li>
+                            <li>Volt Eletropostos</li>
+                            <li>Link+ Energy</li>
+                            <li>ION Mobilidade</li>
+                            <li>PlugBRA</li>
+                            <li>ViaVolt</li>
+                            <li>BR Super Carga</li>
+                            <li>Tupi Recarga</li>
+                        </ul>
+
+                        <p>
+                            Apesar de diferentes visualmente, todos utilizam o
+                            mesmo núcleo de desenvolvimento, permitindo evolução
+                            rápida, correções centralizadas e escalabilidade
+                            corporativa.
+                        </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Escala da Plataforma</h2>
+
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>🔌 Rede Nacional</h3>
+                                <p>
+                                    Mais de
+                                    <strong>1.422 estações conectadas</strong>
+                                    em múltiplas cidades.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>⚡ Alto Consumo</h3>
+                                <p>
+                                    Mais de <strong>22,7 GWh</strong> de energia
+                                    consumida pelos usuários.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🔁 Volume de Uso</h3>
+                                <p>
+                                    Mais de
+                                    <strong
+                                        >1.091.697 sessões de recarga
+                                        realizadas</strong
+                                    >.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>👥 Base de Usuários</h3>
+                                <p>
+                                    Mais de
+                                    <strong>111 mil usuários ativos</strong> em
+                                    diferentes apps.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://tupimob.com/"
+                            class="project-link primary-button"
+                            target="_blank"
+                        >
+                            <i class="fas fa-external-link-alt"></i> Site da
+                            Plataforma
+                        </a>
+
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.tupinamba"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fas fa-mobile-alt"></i> Ver um dos Apps
+                            (Tupi)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="capture-camera" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
+
+                    <div class="project-header">
+                        <h1>Capture Camera (Android Nativo — Java)</h1>
+
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Mobile</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Projeto Pessoal / Prática</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Android SDK</span>
+                            <span class="tech-tag">Camera Intent</span>
+                            <span class="tech-tag">Gallery Intent</span>
+                            <span class="tech-tag">Permissions API</span>
+                        </div>
+                    </div>
+
+                    <div class="container_img-project">
+                        <img
+                            src="./assets/images/captureCamera.png"
+                            alt="Screenshot do Capture Camera"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Funcionalidades Principais</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>📸 Captura de Foto pela Câmera</h3>
+                                <p>
+                                    O app utiliza a
+                                    <strong>Intent nativa da câmera</strong>
+                                    para abrir o aplicativo de câmera e retornar
+                                    a foto capturada para a interface.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🖼️ Seleção de Imagem da Galeria</h3>
+                                <p>
+                                    Permite que o usuário abra a galeria usando
+                                    uma
+                                    <strong>Intent de seleção</strong>
+                                    (<code>Intent.ACTION_PICK</code>) e escolha
+                                    qualquer foto armazenada no dispositivo.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🔐 Controle de Permissões</h3>
+                                <p>
+                                    Implementa solicitações de permissão em
+                                    tempo de execução (como
+                                    <strong>CAMERA</strong>), garantindo que o
+                                    fluxo funcione corretamente em versões
+                                    modernas do Android.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🖥️ Exibição Imediata</h3>
+                                <p>
+                                    Tanto a foto capturada quanto a imagem
+                                    selecionada da galeria são exibidas
+                                    diretamente em uma
+                                    <strong>ImageView</strong> na tela.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://www.youtube.com/watch?v=wc-jJgafToQ&ab_channel=AdrianaLatorre"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fas fa-external-link-alt"></i> Ver
+                            Demonstração
+                        </a>
+
+                        <a
+                            href="https://github.com/AdrianaLatorreGit/capture-camera"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="java-firebase" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
+
+                    <div class="project-header">
+                        <h1>Java Firebase (Projeto de Integração)</h1>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Backend / Mobile</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Estudo e Protótipo</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Realtime Database</span>
+                            <span class="tech-tag">Android Studio</span>
+                            <span class="tech-tag">API REST</span>
+                        </div>
+                    </div>
+
+                    <div class="container_img-project">
+                        <img
+                            src="./assets//images/firebase.png"
+                            alt="Screenshot do Java Firebase"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Funcionalidades Principais</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>💾 Integração com Firebase</h3>
+                                <p>
+                                    Armazena e recupera dados em tempo real
+                                    utilizando o
+                                    <strong>Firebase Realtime Database</strong>,
+                                    garantindo sincronização instantânea entre
+                                    usuário e servidor.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>📲 Android App</h3>
+                                <p>
+                                    Aplicação desenvolvida em
+                                    <strong>Java</strong> para Android,
+                                    permitindo comunicação direta com o Firebase
+                                    através de APIs REST e SDK oficial.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>⚡ Protótipo Funcional</h3>
+                                <p>
+                                    Projeto simples e eficiente, ideal para
+                                    estudos de integração com serviços de
+                                    backend em tempo real, mantendo código
+                                    organizado e escalável.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/AdrianaLatorreGit/java-firebase"
+                            class="project-link primary-button"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                        <a
+                            href="https://www.youtube.com/watch?v=HP8onihCVZU"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fas fa-external-link-alt"></i> Ver
+                            Demonstração
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="site-grasielaMuller" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
+
+                    <div class="project-header">
+                        <h1>Site Grasiela Muller (Portfólio e Apresentação)</h1>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Front-end</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Estudo e Protótipo</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">SCSS / CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                            <span class="tech-tag">Parcel</span>
+                        </div>
+                    </div>
+
+                    <div class="container_img-project desktop-image">
+                        <img
+                            src="./assets/images/grasi-site.png"
+                            alt="Screenshot do Site Grasiela Muller"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Funcionalidades Principais</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>🌐 Layout Responsivo</h3>
+                                <p>
+                                    Estrutura do site otimizada para
+                                    dispositivos móveis e desktops, utilizando
+                                    <strong>CSS Grid</strong> e media queries
+                                    para responsividade completa.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🎨 Design Interativo</h3>
+                                <p>
+                                    Aplicação de efeitos de hover suaves e
+                                    interatividade com
+                                    <strong>JavaScript</strong>, seguindo
+                                    mockups e boas práticas de UX/UI.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>⚡ Projeto Modular</h3>
+                                <p>
+                                    Código organizado e modular com
+                                    <strong>SCSS</strong> e Parcel, facilitando
+                                    manutenção e escalabilidade do site.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/AdrianaLatorreGit/site-grasielaMuller"
+                            class="project-link primary-button"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                        <a
+                            href="https://grasielamuller.netlify.app/"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fas fa-external-link-alt"></i> Ver Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="agente-passagens" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({behavior: 'smooth', block: 'start'}), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
+
+                    <div class="project-header">
+                        <h1>Agente Passagens (Monitor de Preços de Voos)</h1>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Backend / Automação</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Script de Monitoramento / Bot</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Web Scraping / APIs</span>
+                            <span class="tech-tag">Automação / Scheduler</span>
+                            <span class="tech-tag">Email Notification</span>
+                        </div>
+                    </div>
+
+                    <div class="container_img-project">
+                        <img
+                            src="./assets/images/agente_passagens.png"
+                            alt="Console output do agente-passagens"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Funcionalidades Principais</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>🔎 Monitoramento automático de preços</h3>
+                                <p>
+                                    O bot verifica rotas configuradas,
+                                    utilizando RAPIDAPI para procurar passagens
+                                    abaixo do preço-alvo definido pelo usuário.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>📧 Notificação por email</h3>
+                                <p>
+                                    Quando o preço desejado é alcançado, o
+                                    sistema envia automaticamente um e-mail com
+                                    os detalhes da oferta.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🕒 Automação contínua</h3>
+                                <p>
+                                    Utiliza agendamento automático via cron e
+                                    GitHub Actions para manter a busca ativa sem
+                                    necessidade de intervenção manual.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>⚙️ Configuração flexível</h3>
+                                <p>
+                                    Permite definir rota, intervalo de
+                                    verificação e preço-alvo, tornando o agente
+                                    reutilizável e personalizável.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/AdrianaLatorreGit/agente-passagens"
+                            class="project-link primary-button"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="doctorcare" class="page">
+            <div class="project-detail">
+                <div class="container">
+                    <a
+                        class="back-button"
+                        onclick="showPage('home'); setTimeout(() => document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)"
+                    >
+                        <i class="fas fa-arrow-left"></i> Voltar para projetos
+                    </a>
+
+                    <div class="project-header">
+                        <h1>DoctorCare (Landing Page Web)</h1>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Desenvolvimento Front‑end</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Projeto de Bootcamp</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3 / SCSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div class="container_img-project">
+                        <img
+                            src="./assets/images/doctorCare.png"
+                            alt="Screenshot DoctorCare homepage"
+                            class="project-hero-image"
+                        />
+                    </div>
+
+                    <div class="project-section">
+                        <h2>Funcionalidades e Destaques</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>🌐 Layout Responsivo</h3>
+                                <p>
+                                    Design adaptado para dispositivos móveis e
+                                    desktops, garantindo boa experiência de
+                                    navegação independente do tamanho da tela.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🧑‍⚕️ Interface para Agendamento</h3>
+                                <p>
+                                    Estrutura visual clara e acessível para
+                                    permitir ao usuário agendar consultas de
+                                    forma intuitiva e rápida.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>🎨 Design Clean e Profissional</h3>
+                                <p>
+                                    Uso de boas práticas de UI/UX, com
+                                    hierarquia visual clara, tipografia legível
+                                    e paleta de cores coesa — ideal para landing
+                                    pages institucionais.
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h3>⚙️ Código organizado e modular</h3>
+                                <p>
+                                    Separação entre estrutura (HTML), estilos
+                                    (CSS/SCSS) e comportamento (JS), facilitando
+                                    manutenção e futuras extensões do site.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/AdrianaLatorreGit/doctorCare"
+                            class="project-link primary-button"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                        <a
+                            href="https://doctorcare-adrianalatorre.netlify.app/"
+                            class="project-link"
+                            target="_blank"
+                        >
+                            <i class="fas fa-external-link-alt"></i> Ver Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>
-                            <i class="fa fa-copyright"></i>2025 by
-                            <a
-                                href="https://github.com/AdrianaLatorreGit"
-                                target="_blank"
-                                >Adriana Latorre</a
-                            >
-                        </p>
-                    </div>
+                <div class="social-links">
+                    <a
+                        href="https://www.linkedin.com/in/adriana-latorre/"
+                        target="_blank"
+                        aria-label="LinkedIn"
+                        ><i class="fab fa-linkedin"></i
+                    ></a>
+                    <a
+                        href="https://github.com/AdrianaLatorreGit"
+                        target="_blank"
+                        aria-label="GitHub"
+                        ><i class="fab fa-github"></i
+                    ></a>
+                    <a
+                        href="mailto:dri.latorre@gmail.com"
+                        aria-label="Enviar Email"
+                    >
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a
+                        href="./assets/curriculo/adrianaLatorre-Developer-en.pdf"
+                        download="adrianaLatorre-Developer-en.pdf"
+                        target="_blank"
+                        aria-label="Baixar Currículo (PDF)"
+                    >
+                        <i class="fas fa-download"></i>
+                    </a>
                 </div>
+                <p class="copyright">© 2025 Adriana Latorre.</p>
             </div>
         </footer>
 
-        <!-- Scripts -->
-        <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-        <script src="assets/js/isotope.min.js"></script>
-        <script src="assets/js/owl-carousel.js"></script>
-        <script src="assets/js/lightbox.js"></script>
-        <script src="assets/js/tabs.js"></script>
-        <script src="assets/js/video.js"></script>
-        <script src="assets/js/slick-slider.js"></script>
-        <script src="assets/js/custom.js"></script>
-        <script>
-            //according to loftblog tut
-            $('.nav li:first').addClass('active');
-
-            var showSection = function showSection(section, isAnimate) {
-                var direction = section.replace(/#/, ''),
-                    reqSection = $('.section').filter(
-                        '[data-section="' + direction + '"]'
-                    ),
-                    reqSectionPos = reqSection.offset().top - 0;
-
-                if (isAnimate) {
-                    $('body, html').animate(
-                        {
-                            scrollTop: reqSectionPos,
-                        },
-                        800
-                    );
-                } else {
-                    $('body, html').scrollTop(reqSectionPos);
-                }
-            };
-
-            var checkSection = function checkSection() {
-                $('.section').each(function () {
-                    var $this = $(this),
-                        topEdge = $this.offset().top - 80,
-                        bottomEdge = topEdge + $this.height(),
-                        wScroll = $(window).scrollTop();
-                    if (topEdge < wScroll && bottomEdge > wScroll) {
-                        var currentId = $this.data('section'),
-                            reqLink = $('a').filter(
-                                '[href*=\\#' + currentId + ']'
-                            );
-                        reqLink
-                            .closest('li')
-                            .addClass('active')
-                            .siblings()
-                            .removeClass('active');
-                    }
-                });
-            };
-
-            $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
-                if ($(e.target).hasClass('external')) {
-                    return;
-                }
-                e.preventDefault();
-                $('#menu').removeClass('active');
-                showSection($(this).attr('href'), true);
-            });
-
-            $(window).scroll(function () {
-                checkSection();
-            });
-        </script>
+        <script src="assets/js/script.js"></script>
     </body>
 </html>
