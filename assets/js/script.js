@@ -39,25 +39,6 @@ $(function () {
 
     $(window).on('scroll', checkFadeIn);
     checkFadeIn();
-
-    // Form Submit
-    $('#contactform').on('submit', function (e) {
-        e.preventDefault();
-
-        const name = $('#name').val();
-        const email = $('#email').val();
-        const subject = $('#subject').val();
-        const message = $('#message').val();
-
-        if (name && email && subject && message) {
-            $('#success').fadeIn();
-            $('#contactform').trigger('reset');
-
-            setTimeout(function () {
-                $('#success').fadeOut();
-            }, 5000);
-        }
-    });
 });
 
 // Page Navigation
